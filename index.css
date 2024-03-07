@@ -1,0 +1,16 @@
+body {
+  background-image: url('asiku.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+th {
+  background-color: transparent;
+  color: transparent; 
+}
+
+.transparent-table {
+  background-color: transparent;
+}

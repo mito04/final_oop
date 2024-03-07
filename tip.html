@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="tip.css" />
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" >ExploreEpic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Country</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tip.html">Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="crud.html">Comment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="display-4">Your Weather Wisdom!</h1>
+        <p class="lead">Stay out of trouble with our expert tips for a safe and enjoyable travel experience.</p>
+        <div class="search-container">
+            <input type="text" id="SearchInput" placeholder="Search for Weather..." oninput="searchWeather()">
+            <button id="SearchButton" class="btn btn-success">Search</button>
+        </div>
+
+        <table class="th">
+            <tbody>
+                <tr>
+                    <td><img src="inca.avif" alt="Inca Trail" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Inca Trail (Peru)</h2>
+
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 26 miles (43 km).</li>
+                            <li>Duration: 4 days.</li>
+                            <li>Highlights: Ancient Incan ruins, Andean landscapes, Machu Picchu.</li>
+                            <li>Permits: Limited daily permits; book well in advance.</li>
+                            <li>Terrain: Diverse, including high mountain passes and lush cloud forests.</li>
+                        </ul>
+
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Best during the dry season (May to September).</li>
+                            <li>Dress in layers, bring rain gear, and be prepared for cool nights.</li>
+                        </ul>
+
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate; high winds can be challenging, especially at high altitudes.</li>
+                            <li>Temperature: Mild to warm during the day, cooler at night.</li>
+                        </ul>
+
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Extremely high humidity can make hiking uncomfortable.</li>
+                            <li>Wind Speed: Very high winds, especially at high altitudes, can pose safety risks.</li>
+                            <li>Temperature: Extremely cold temperatures at night without proper gear.</li>
+                        </ul>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="milford.jpg" alt="Milford Track" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Milford Track (New Zealand)</h2>
+
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: 33.5 miles (53.5 km).</li>
+                            <li>Duration: 4 days.</li>
+                            <li>Highlights: Fiordland National Park, Sutherland Falls, Mackinnon Pass.</li>
+                            <li>Permits: Limited to manage trail impact; book in advance.</li>
+                            <li>Terrain: Varied, from rainforests to alpine meadows.</li>
+                        </ul>
+
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Variable weather; can be rainy anytime.</li>
+                            <li>Waterproof gear is essential; be prepared for sudden changes.</li>
+                        </ul>
+
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate to high.</li>
+                            <li>Wind Speed: Moderate; be prepared for gusty winds in alpine sections.</li>
+                            <li>Temperature: Cool to mild; can be cold in higher elevations.</li>
+                        </ul>
+
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged heavy rain and high humidity can lead to difficult trail conditions.</li>
+                            <li>Wind Speed: Extremely high winds, especially on exposed ridges.</li>
+                            <li>Temperature: Extremely cold temperatures without adequate clothing.</li>
+                        </ul>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="torres.jpg" alt="Torres del Paine Circuit" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Torres del Paine Circuit (Chile)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 52 miles (84 km).</li>
+                            <li>Duration: 8-10 days.</li>
+                            <li>Highlights: Torres del Paine National Park, glaciers, diverse wildlife.</li>
+                            <li>Permits: Required; reservations recommended during peak season.</li>
+                            <li>Terrain: Challenging, with mountain passes and varied landscapes.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Unpredictable weather; can be windy and cold year-round.</li>
+                            <li>Pack windproof and waterproof layers; check weather updates.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate to high; windy conditions are common.</li>
+                            <li>Temperature: Cool to cold; drops significantly at higher altitudes.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged rain and high humidity can make the trail challenging.</li>
+                            <li>Wind Speed: Very high winds, especially in the mountainous areas.</li>
+                            <li>Temperature: Extreme cold, especially at high elevations, without proper insulation.</li>
+                        </ul>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="appa.jpg" alt="Appalachian Trail" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Appalachian Trail (USA)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Over 2,000 miles (3,500 km).</li>
+                            <li>Duration: 5-7 months.</li>
+                            <li>Highlights: Diverse ecosystems, scenic views.</li>
+                            <li>Permits: No single permit; regulations vary by section.</li>
+                            <li>Terrain: Varied, from mountains in the East to more gentle slopes in the North.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Varies by region and season; plan accordingly.</li>
+                            <li>Check regional weather patterns, bring appropriate clothing.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate; can vary by region.</li>
+                            <li>Temperature: Varies by region and season.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Extremely high humidity combined with high temperatures can be uncomfortable.</li>
+                            <li>Wind Speed: Very high winds, especially in exposed sections.</li>
+                            <li>Temperature: Extreme heat in summer or extreme cold in winter without proper gear.</li>
+                        </ul>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="paci.jpg" alt="Pacific Crest Trail" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Pacific Crest Trail (USA and Canada)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 2,650 miles (4,265 km).</li>
+                            <li>Duration: 4-6 months.</li>
+                            <li>Highlights: Sierra Nevada and Cascade mountain ranges, diverse ecosystems.</li>
+                            <li>Permits: Required for some sections; varies by region.</li>
+                            <li>Terrain: Diverse, ranging from deserts to alpine regions.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Varies by region; snow can persist in high elevations.</li>
+                            <li>Check seasonal conditions, carry gear for cold and hot weather.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Generally low to moderate.</li>
+                            <li>Wind Speed: Moderate; higher winds possible in exposed areas.</li>
+                            <li>Temperature: Varies widely; be prepared for both hot and cold conditions.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged high humidity and hot temperatures can be challenging.</li>
+                            <li>Wind Speed: Very high winds in exposed sections.</li>
+                            <li>Temperature: Extreme heat in desert sections or extreme cold in higher elevations.</li>
+                        </ul>
+                
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="tonga.jpg" alt="Tongariro Alpine Crossing" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Tongariro Alpine Crossing (New Zealand)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: 12 miles (19.4 km)</li>
+                            <li>Duration: 1 day</li>
+                            <li>Highlights: Volcanic craters, emerald lakes, unique geological features</li>
+                            <li>Permits: None required</li>
+                            <li>Terrain: Volcanic, with steep climbs and descents</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Changeable weather; be prepared for rapid changes</li>
+                            <li>Dress in layers, carry windproof and waterproof gear</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate</li>
+                            <li>Wind Speed: Moderate to high; especially on exposed ridges</li>
+                            <li>Temperature: Cool to cold; can be windy at higher elevations</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged rain and high humidity can make the volcanic terrain slippery</li>
+                            <li>Wind Speed: Extremely high winds on exposed ridges</li>
+                            <li>Temperature: Extremely cold temperatures without proper clothing</li>
+                        </ul>
+                
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="tour.webp" alt="Tour du Mont Blanc" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Tour du Mont Blanc (France, Italy, Switzerland)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 105 miles (170 km).</li>
+                            <li>Duration: 7-11 days.</li>
+                            <li>Highlights: Mont Blanc massif, alpine meadows, charming villages.</li>
+                            <li>Permits: Generally not required for the entire route.</li>
+                            <li>Terrain: Varied, with mountainous and alpine sections.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Best during the summer months (June to September).</li>
+                            <li>Bring layers, as temperatures can vary; be prepared for mountain weather changes.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate; can be higher at higher altitudes.</li>
+                            <li>Temperature: Cool to mild temperatures in alpine environments.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Extended periods of rain and high humidity can make the trail challenging.</li>
+                            <li>Wind Speed: Very high winds in exposed alpine areas.</li>
+                            <li>Temperature: Extreme cold without proper insulation.</li>
+                        </ul>
+                
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="john.webp" alt="John Muir Trail" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>John Muir Trail (USA)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 211 miles (340 km).</li>
+                            <li>Duration: 2-4 weeks.</li>
+                            <li>Highlights: Sierra Nevada's high mountain passes, pristine lakes.</li>
+                            <li>Permits: Required; popular trail, plan in advance.</li>
+                            <li>Terrain: Mountainous, with high passes and alpine lakes.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Generally good during the summer months; snow can persist in higher elevations.</li>
+                            <li>Carry sun protection, as well as layers for cooler temperatures at higher elevations.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate; higher winds possible at higher elevations.</li>
+                            <li>Temperature: Varies by region and season; be prepared for alpine conditions.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged high humidity combined with hot temperatures can be uncomfortable.</li>
+                            <li>Wind Speed: Very high winds, especially at higher elevations.</li>
+                            <li>Temperature: Extreme heat in summer or extreme cold without proper gear.</li>
+                        </ul>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="haute.jpg" alt="Haute Route" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Haute Route (France and Switzerland)</h2>
+            
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Around 112 miles (180 km).</li>
+                            <li>Duration: 10-14 days.</li>
+                            <li>Highlights: Mont Blanc and Matterhorn views, alpine landscapes.</li>
+                            <li>Permits: Generally not required for the entire route.</li>
+                            <li>Terrain: Varied, with alpine terrain and mountainous sections.</li>
+                        </ul>
+            
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Best during the summer months (July and August).</li>
+                            <li>Bring layers, be prepared for mountain weather, and check conditions for high passes.</li>
+                        </ul>
+            
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate to high; be prepared for mountain winds.</li>
+                            <li>Temperature: Cool to mild temperatures in alpine environments.</li>
+                        </ul>
+            
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Extended periods of rain and high humidity can make alpine terrain challenging.</li>
+                            <li>Wind Speed: Very high winds in exposed mountainous areas.</li>
+                            <li>Temperature: Extreme cold without proper insulation.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><img src="over.jpg" alt="Overland Track" class="trail-image"></td>
+                    <td colspan="2">
+                        <h2>Overland Track (Australia)</h2>
+                
+                        <h3>Trail Details:</h3>
+                        <ul>
+                            <li>Distance: Approximately 40 miles (65 km).</li>
+                            <li>Duration: 5-6 days.</li>
+                            <li>Highlights: Cradle Mountain, rainforests, glacial lakes.</li>
+                            <li>Permits: Required; limited to manage impact.</li>
+                            <li>Terrain: Varied, with rainforest, alpine, and lake-side sections.</li>
+                        </ul>
+                
+                        <h3>Weather Tips:</h3>
+                        <ul>
+                            <li>Variable weather; can experience rain and cool temperatures.</li>
+                            <li>Waterproof gear is essential; pack layers for varying conditions.</li>
+                        </ul>
+                
+                        <h3>Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Moderate.</li>
+                            <li>Wind Speed: Moderate; can be higher in open areas.</li>
+                            <li>Temperature: Cool to mild temperatures; can be cold in higher elevations.</li>
+                        </ul>
+                
+                        <h3>Not Suitable Conditions:</h3>
+                        <ul>
+                            <li>Humidity: Prolonged heavy rain and high humidity can make the trail challenging.</li>
+                            <li>Wind Speed: Very high winds, especially in open areas.</li>
+                            <li>Temperature: Extreme cold without proper gear, especially at higher elevations.</li>
+                        </ul>
+                
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="text-center py-3">
+        &copy; 2024 Travelling Tips App. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-TZl+uqKz3sukls1aPMJZf/bZGOJ8QRg6o8S8+3Z5ndblGBu4FvTtx5Dl5voK1HBa" crossorigin="anonymous"></script>
+
+    <script>
+        function searchWeather() {
+    // Get the search input value
+    var searchInput = document.getElementById("SearchInput").value.toLowerCase();
+
+    // Get all rows in the table body
+    var rows = document.querySelectorAll("tbody tr");
+
+    // Iterate through each row and check if any cell contains the search term
+    rows.forEach(function (row) {
+        var cells = row.querySelectorAll("td");
+        var rowContainsSearchTerm = Array.from(cells).some(function (cell) {
+            return cell.textContent.toLowerCase().includes(searchInput);
+        });
+
+        if (rowContainsSearchTerm) {
+            // If any cell contains the search term, show the row
+            row.classList.remove("hidden");
+        } else {
+            // If not, hide the row
+            row.classList.add("hidden");
+        }
+    });
+}
+
+    </script>
+</body>
+</html>

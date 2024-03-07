@@ -1,0 +1,7 @@
+body {
+    background-image: url('asiku.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover; /* This ensures the background image covers the entire viewport */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    color: #fff; /* Set text color to white for better visibility on the background image */
+}

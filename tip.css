@@ -1,0 +1,30 @@
+body {
+    background-image: url('asiku.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #fff; 
+}
+
+.trail-image {
+    max-width: 570px;
+    height: 570px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background-color: transparent; 
+    color: #ffffff; /
+}
+
+.search-container {
+    background-color: transparent; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+h2, h3 {
+    margin-left: 20px; /* Adjust the value as needed */
+}
